@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="ic.png" />
+    <link rel="stylesheet" href="/files/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="popup" id="popup-1">
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup1()" style="cursor: pointer">
+          ×
+        </div>
+        <h1 class="signin-h1">Sign in</h1>
+        <div class="signin-form">
+          <div class="input-field">
+            <input
+              type="email"
+              id="signin-email"
+              placeholder="Email"
+              class="validate"
+            />
+          </div>
+          <div class="input-field">
+            <input
+              type="password"
+              id="signin-password"
+              placeholder="Password"
+              class="validate"
+            />
+            <br />
+          </div>
+
+          <button id="signin-button" class="second-button">Sign in</button>
+        </div>
+        <div id="user-info" style="display: none">
+          <span id="user-name"></span>
+          <button id="logout-button" class="second-button">Logout</button>
+        </div>
+        <p class="signin-p">
+          <br />
+          <br />
+          Don’t have an account?<br />
+          <a
+            class="signin-a"
+            href="#Sign-up-1"
+            onclick="togglePopup1(); togglePopup2();"
+            >Sign Up</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-2">
+      <div class="content" id="signup-1">
+        <div
+          class="close-btn"
+          onclick="togglePopup1(); togglePopup2();"
+          style="cursor: pointer"
+        >
+          ×
+        </div>
+        <h1 class="signup-h1">Sign up</h1>
+        <div class="input-field">
+          <input
+            type="text"
+            id="signup-username"
+            placeholder="Username"
+            class="validate"
+          />
+        </div>
+        <div class="input-field">
+          <input
+            type="email"
+            id="signup-email"
+            placeholder="Email"
+            class="validate"
+          />
+        </div>
+        <div class="input-field">
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Password"
+            class="validate"
+          />
+          <br />
+        </div>
+        <button id="signup-button" class="second-button">Sign up</button>
+        <p class="signup-p">
+          <br />
+          Already have an account?<br />
+          <a
+            class="signin-a"
+            href="#Sign-up-1"
+            onclick="togglePopup1(); togglePopup2();"
+            >Sign in</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <header class="header" id="header2">
+      <i
+        class="bx bx-menu"
+        style="font-size: 50px; position: absolute; top: 0; left: 0"
+        onclick="sliding_menu()"
+        id="btn-btn"
+      ></i>
+
+      <!------------------------------------------------------------------------------------------------------------------------------------>
+
+      <!----------------------------------------------------------------------------------------------------------------------------->
+      <a href="#" class="logo">Alan Roy</a>
+
+      <nav class="navbar" id="myLinks">
+        <div class="container topBotomBordersOut">
+          <a href="#Home" style="--i: 1" class="active">Home</a>
+          <a href="#About" style="--i: 2">About</a>
+          <a href="#Skills" style="--i: 3">Skills</a>
+          <a href="#Projects" style="--i: 4">Projects</a>
+          <a href="#Contact" style="--i: 5">Contact</a>
+          <a onclick="togglePopup1()" style="--i: 5">Sign In/sign up</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <div class="header1" id="header">
+        <section class="home" id="Home">
+          <div class="home-content">
+            <div class="sha"></div>
+            <h3>Hello, It's Me</h3>
+            <h1>Alan Roy</h1>
+
+            <h4 style="--i: 6">
+              I'm a student who is passionate in<br />
+              <b><span class="text"></span></b>
+            </h4>
+
+            <div class="home-sci">
+              <a
+                href="https://www.linkedin.com/in/coder-amrit-4a825b220/"
+                style="--i: 7"
+                target="_blank"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/coding_with_amrit/"
+                style="--i: 8"
+                target="_blank"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@amritcoder24"
+                style="--i: 9"
+                target="_blank"
+                ><i class="bx bxl-youtube"></i
+              ></a>
+              <a
+                href="https://github.com/amriteditz24"
+                style="--i: 10"
+                target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
+            <a
+              href="https://docs.google.com/document/d/1ztaI5prdZ6lpICww6gfFxQkqgGq9JnGp/edit?usp=sharing&ouid=100298591592099650704&rtpof=true&sd=true"
+              style="--i: 11"
+              class="btn-box"
+              target="_blank"
+              >Download Resume</a
+            >
+          </div>
+        </section>
+      </div>
+
+      <section>
+        <div class="about" id="About">
+          <div class="about-img">
+            <img src="./img/avatar.jpg" class="abt-res" />
+          </div>
+          <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <p>
+              I am Alan Roy, a passionate and dedicated student pursuing a
+              Bachelor's degree in Computer Science Engineering at Sahrdaya
+              College of Engineering and Technology. Currently in my third year
+              of study, I am deeply fascinated by the ever-evolving world of
+              technology and its potential to shape the future. My academic
+              journey has been marked by a strong foundation in computer science
+              principles, coupled with hands-on experience in various
+              programming languages and software development methodologies..<br />
+              <br />
+              <a
+                href="https://docs.google.com/document/d/1ztaI5prdZ6lpICww6gfFxQkqgGq9JnGp/edit?usp=sharing&ouid=100298591592099650704&rtpof=true&sd=true"
+                style="--i: 11"
+                class="abtbtn-box"
+                target="_blank"
+                >Download Resume</a
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="Skills">
+        <h1 class="subtitle">My <span>Skills</span></h1>
+        <div class="sec">
+          <div class="container1">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="Technical-bars">
+              <div class="bar">
+                <i class="bx bxl-html5" style="color: #c9332e"></i>
+                <div class="info">
+                  <span>HTML <span class="addhtml"></span></span>
+                </div>
+                <div class="progress-line html">
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="bar">
+                <i class="bx bxl-css3" style="color: #147bbc"></i>
+                <div class="info">
+                  <span>CSS <span class="addcss"></span></span>
+                </div>
+                <div class="progress-line css">
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="bar">
+                <i class="bx bxl-python" style="color: #b0bc1e"></i>
+                <div class="info">
+                  <span>Python <span class="addpy"></span></span>
+                </div>
+                <div class="progress-line python">
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="bar">
+                <i class="bx bxl-java" style="color: #c95d2e"></i>
+                <div class="info">
+                  <span>Java <span class="addjava"></span></span>
+                </div>
+                <div class="progress-line java">
+                  <span></span>
+                </div>
+              </div>
+
+              <div class="bar">
+                <i class="bx bxl-c-plus-plus" style="color: #3db2fc"></i>
+                <div class="info">
+                  <span>C/C++ <span class="addc"></span></span>
+                </div>
+                <div class="progress-line cpls">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container2">
+            <h1 class="heading1">Professional Skills</h1>
+            <div class="radial-bars">
+              <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                  <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                  <circle class="path path-1" cx="100" cy="80" r="80"></circle>
+                </svg>
+                <div class="percentage">60%</div>
+                <div class="text">Problem Solving</div>
+              </div>
+
+              <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                  <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                  <circle class="path path-2" cx="100" cy="80" r="80"></circle>
+                </svg>
+                <div class="percentage">70%</div>
+                <div class="text">Creativity</div>
+              </div>
+
+              <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                  <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                  <circle class="path path-3" cx="100" cy="80" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Communication</div>
+              </div>
+
+              <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                  <circle class="progress-bar" cx="100" cy="80" r="80"></circle>
+                  <circle class="path path-4" cx="100" cy="80" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Teamwork</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Projects">
+        <div id="portfolio" class="services">
+          <div class="main-text" id="serv">
+            <h2>My <span>Projects</span></h2>
+            <div class="serv-container">
+              <div class="row">
+                <img src="./img/FMD.png" />
+                <div class="layer">
+                  <h5>Face Mask Detection</h5>
+                  <p>
+                    Face mask of the people are detected by using OpenCV, Python
+                    and find out the person without mask.
+                  </p>
+
+                  <a href="#"
+                    ><i class="bx bxs-face-mask" style="color: aliceblue"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="row">
+                <img src="./img/DD.png" />
+                <div class="layer">
+                  <h5>Drowsiness Detection</h5>
+                  <p>
+                    The face of the driver is captured and eye is detected by
+                    OpenCV, Python. If eye is closed alarm rings.
+                  </p>
+
+                  <a href="#"
+                    ><i class="bx bxs-low-vision" style="color: aliceblue"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div class="row">
+                <img src="./img/DA.png" />
+                <div class="layer">
+                  <h5>Desktop Application</h5>
+                  <p>
+                    A windows application to manage the work of the staff’s in
+                    the company by using Python Tkinter and SQL.
+                  </p>
+
+                  <a href="#"
+                    ><i class="bx bx-desktop" style="color: aliceblue"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Services">
+        <div class="project">
+          <div class="container">
+            <h1 class="sub-title">My <span>Services</span></h1>
+            <div class="prj-list">
+              <div>
+                <i class="bx bx-code" style="color: #00eeff"></i>
+                <h2>Web Development</h2>
+                <p>
+                  Plan, create and code internet sites and web pages with modern
+                  and artful design.
+                </p>
+              </div>
+              <div>
+                <i class="bx bx-cube" style="color: #00eeff"></i>
+                <h2>UI / UX Design</h2>
+                <p>
+                  Specialized in creating clean, artful design that are both
+                  intuitive and functional.
+                </p>
+              </div>
+              <div>
+                <i class="bx bxl-android" style="color: #00eeff"></i>
+                <h2>Software Development</h2>
+                <p>
+                  Mobile application developer with knowledge of Java and
+                  Android Studio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts" id="Contact">
+        <div class="contact-text">
+          <h2>Contact <span>Me</span></h2>
+          <h4>Let's Work Together</h4>
+          <div class="contact-list">
+            <li><i class="bx bxs-send"></i>post101box@gmail.com</li>
+            <li><i class="bx bxs-phone-call"></i>9539218663</li>
+          </div>
+          <div class="contact-icons">
+            <a href="https://github.com/amriteditz24" target="_blank"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a href="https://www.youtube.com/@amritcoder24"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/coding_with_amrit/"
+              target="_blank"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/coder-amrit-4a825b220/"
+              target="_blank"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <a href="#Home" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+    <script src="\files\script.js" type="module"></script>
+    <script src="\files\DB.js"></script>
+  </body>
+</html>
